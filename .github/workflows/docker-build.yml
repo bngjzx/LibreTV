@@ -3,6 +3,7 @@ name: Build LibreTV image
 on:
   workflow_run:
     workflows: ["Bump version"]
+    - cron: "0 4 * * *" # At 12PM UTC+8
     types:
       - completed
   workflow_dispatch:
